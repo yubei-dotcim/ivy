@@ -1,0 +1,51 @@
+/* Importa los estilos generales */
+@import url("main.css");
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #415A77; /* Azul crepuscular */
+    margin-top: 30px;
+}
+
+.descripcion-ligera {
+    color: #778DA9;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.seccion-tradicionales, .seccion-digitales, .seccion-storyboard {
+    background-color: #1B263B; /* Azul de Prusia */
+    margin: 25px auto;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 1000px;
+}
+
+.seccion-tradicionales h2, .seccion-digitales h2, .seccion-storyboard h2 {
+    color: #E0E1DD; /* Gris alabastro */
+    border-bottom: 1px dashed #415A77;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap; /* Para que las imágenes se organicen en varias filas */
+    justify-content: space-around;
+    gap: 15px; /* Espacio entre las imágenes */
+    margin-top: 15px;
+}
+
+.imagen-muestra {
+    width: 30%; /* Tres imágenes por fila */
+    max-width: 300px;
+    height: auto;
+    border: 3px solid #778DA9;
+    transition: transform 0.3s;
+}
+
+.imagen-muestra:hover {
+    transform: scale(1.05); /* Se agranda un poco al pasar el mouse */
+}

@@ -1,0 +1,47 @@
+/* Importa los estilos generales */
+@import url("main.css");
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color: #E0E1DD; 
+    text-shadow: 2px 2px #415A77; /* Sombra al título */
+    margin-top: 30px;
+}
+
+.descripcion-ligera {
+    font-weight: bold;
+    color: #778DA9;
+    margin-bottom: 30px;
+}
+
+.seccion-originales, .seccion-mejorados {
+    background-color: #0D1B2A;
+    border: 2px solid #415A77;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 900px;
+    display: flex; /* Para poner el texto y las imágenes en línea */
+    flex-wrap: wrap; /* Permite que las imágenes bajen si no caben */
+    justify-content: space-around;
+}
+
+.seccion-originales h2, .seccion-mejorados h2 {
+    width: 100%; /* El título ocupa todo el ancho */
+    color: #778DA9;
+    text-align: center;
+}
+
+.seccion-originales p, .seccion-mejorados p {
+    width: 100%;
+    text-align: center;
+}
+
+.imagen-muestra {
+    width: 45%; /* Para que quepan dos imágenes por línea */
+    max-width: 400px;
+    height: auto;
+    border: 5px solid #E0E1DD;
+    margin: 10px;
+}

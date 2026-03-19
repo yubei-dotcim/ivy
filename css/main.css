@@ -1,0 +1,96 @@
+/* Paleta de Colores:
+   Ink Black: #0D1B2A
+   Azul de Prusia: #1B263B
+   Azul crepuscular: #415A77
+   Mezclilla polvorienta: #778DA9
+   Gris alabastro: #E0E1DD
+*/
+
+body {
+    /* El fondo será el color más oscuro (Ink Black) */
+    background-color: #0D1B2A; 
+    color: #E0E1DD; /* Las letras serán el color claro (Gris alabastro) */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAV: Barra de Navegación */
+.navegacion {
+    background-color: #1B263B; /* Un azul oscuro para la barra */
+    padding: 10px 20px;
+    display: flex; /* Para que los elementos estén en línea */
+    justify-content: space-around; /* Espacio entre los enlaces */
+    align-items: center;
+}
+
+.logo-container {
+    /* Espacio para el LOGO de 100x100 */
+    width: 100px;
+    height: 100px;
+    background-color: #415A77; /* Un color de fondo para el logo */
+    border-radius: 5px;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para que la imagen del logo se vea bien */
+}
+
+.navegacion a {
+    color: #E0E1DD;
+    text-decoration: none; /* Quita la línea de abajo de los enlaces */
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.navegacion a:hover {
+    background-color: #415A77; /* Cambia de color al pasar el mouse */
+    border-radius: 5px;
+}
+
+/* IMAGEN*: Estilo para la imagen grande de presentación */
+.imagen-destacada {
+    margin: 20px 0;
+}
+
+.imagen-full {
+    max-width: 80%;
+    height: auto;
+    border: 3px solid #778DA9; /* Borde sutil */
+}
+
+/* PRESENTACIÓN RÁPIDA* */
+.presentacion-rapida h2 {
+    color: #778DA9; /* Azul medio para el título */
+}
+
+/* Sección de Categorías */
+.seccion-categorias {
+    margin-top: 40px;
+    background-color: #1B263B;
+    padding: 20px;
+}
+
+.seccion-categorias ul {
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0;
+}
+
+.seccion-categorias a {
+    color: #E0E1DD;
+    text-decoration: none;
+    display: block; /* Para que cada enlace ocupe su propia línea */
+    padding: 5px;
+}
+footer{
+    color: #E0E1DD;
+    text-align: center;
+    padding: 3%;
+}
+footer a{
+    color: aliceblue;
+}

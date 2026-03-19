@@ -1,0 +1,54 @@
+/* Importa los estilos generales */
+@import url("main.css");
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color: #778DA9; /* Mezclilla polvorienta */
+    margin-top: 40px;
+    letter-spacing: 3px; /* Espacio entre letras para hacerlo más elegante */
+}
+
+.descripcion-ligera {
+    color: #E0E1DD;
+    font-size: 1.1em;
+    margin-bottom: 50px;
+}
+
+.seccion-personas, .seccion-objetos {
+    background-color: #1B263B; /* Azul de Prusia */
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 1100px;
+    box-shadow: 0 0 15px rgba(65, 90, 119, 0.5); /* Sombra elegante usando Azul crepuscular */
+}
+
+.seccion-personas h2, .seccion-objetos h2 {
+    color: #415A77; /* Azul crepuscular */
+    font-size: 1.6em;
+    padding-bottom: 10px;
+}
+
+.galeria-fotos {
+    display: flex;
+    justify-content: center; /* Centrar las imágenes */
+    flex-wrap: wrap; 
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.imagen-foto {
+    width: 22%; /* Para que quepan cuatro fotos por fila */
+    min-width: 200px; /* Asegura que no sean demasiado pequeñas en pantallas chicas */
+    height: auto;
+    border: 1px solid #778DA9;
+    box-shadow: 2px 2px 5px #0D1B2A; /* Sombra oscura para dar contraste */
+    filter: brightness(0.95); /* Hace las fotos ligeramente más oscuras */
+    transition: filter 0.3s;
+}
+
+.imagen-foto:hover {
+    filter: brightness(1.2); /* Se vuelven más brillantes al pasar el mouse */
+}

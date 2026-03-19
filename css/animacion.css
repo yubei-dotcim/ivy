@@ -1,0 +1,49 @@
+/* Importa los estilos generales */
+@import url("main.css");
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color: #E0E1DD; 
+    background-color: #415A77; /* Un fondo llamativo para el título */
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.descripcion-ligera {
+    font-size: 1.2em;
+    color: #778DA9;
+    margin-bottom: 50px;
+}
+
+.seccion-shorts, .seccion-producciones {
+    background-color: #0D1B2A; /* Ink Black para contrastar el contenido */
+    border: 3px solid #1B263B;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.seccion-shorts h2, .seccion-producciones h2 {
+    color: #778DA9; 
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.galeria-videos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.imagen-video {
+    width: 45%; /* Dos videos por fila */
+    max-width: 350px;
+    height: auto;
+    border: 5px double #E0E1DD;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para simular profundidad */
+    cursor: pointer; /* Indica que es algo clickeable (un video) */
+}

@@ -1,0 +1,36 @@
+/* Importa los estilos generales para no repetir código */
+@import url("main.css");
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    color: #778DA9; 
+    border-bottom: 2px solid #415A77; /* Línea de color debajo del título */
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.descripcion-ligera {
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.seccion-guiones, .seccion-historias {
+    background-color: #1B263B;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 700px;
+    text-align: left;
+}
+
+.seccion-guiones h2, .seccion-historias h2 {
+    color: #E0E1DD;
+}
+
+.imagen-muestra {
+    width: 100%; /* Ocupa todo el ancho de la sección */
+    height: auto;
+    margin: 10px 0;
+    border: 1px solid #778DA9;
+}
