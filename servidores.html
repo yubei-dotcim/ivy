@@ -21,49 +21,71 @@
         <a href="servidores.html">Servidores Web</a>
     </nav>
 
-    <section class="imagen-destacada">
-        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?q=80&w=1000" alt="Servidores de alto rendimiento" class="imagen-full">
-    </section>
-
-    <header class="presentacion-rapida">
-        <h1>Gestión de Infraestructura Crítica</h1>
-        <h2>Manual de Operaciones y Estándares Técnicos</h2>
-        <p>Fundamentos para la implementación de servidores web de alto rendimiento y disponibilidad.</p>
     </header>
 
-    <main class="seccion-categorias">
-        
-        <article id="tipos">
-            <h3>1. Tipos de Servidores</h3>
-            <p>Implementación de arquitecturas basadas en necesidades de escalabilidad: Hosting Compartido para proyectos ligeros, VPS para control total y Cloud Hosting para alta demanda elástica.</p>
-        </article>
-
-        <article id="hardware">
-            <h3>2. Hardware y Robustez Física</h3>
-            <p>Selección de componentes de grado empresarial: Procesadores de múltiples hilos, memoria <strong>RAM ECC</strong> para corrección de errores y arreglos de discos <strong>RAID 1/5</strong> para garantizar la integridad de los datos.</p>
-        </article>
-
-        <article id="software">
-            <h3>3. Ecosistema de Software (Stack)</h3>
-            <p>Configuración de entornos basados en el kernel Linux (Ubuntu/Debian) utilizando la pila <strong>LAMP/LEMP</strong>. Gestión de servicios mediante terminal segura y optimización de recursos del sistema.</p>
-        </article>
-
-        <article id="metodologia">
-            <h3>4. Formas de Trabajo (DevOps)</h3>
+    <main>
+        <section id="tipos" class="manual-section">
+            <h3>1. Tipos de Servidores Web</h3>
+            <p>La elección del servidor depende de la carga de trabajo y el nivel de control requerido:</p>
             <ul>
-                <li><a href="#">Administración Remota vía SSH</a></li>
-                <li><a href="#">Contenedores con Docker</a></li>
-                <li><a href="#">Monitoreo de Logs en Tiempo Real</a></li>
-                <li><a href="#">Políticas de Backup y Recuperación</a></li>
+                <li><strong>Hosting Compartido:</strong> Varios sitios web comparten los mismos recursos (CPU/RAM). Es económico pero limitado en configuración.</li>
+                <li><strong>VPS (Virtual Private Server):</strong> Mediante un hipervisor, se particiona un servidor físico en máquinas virtuales independientes con recursos garantizados.</li>
+                <li><strong>Servidor Dedicado:</strong> Uso exclusivo de una máquina física. Ofrece el máximo rendimiento y seguridad para aplicaciones críticas.</li>
+                <li><strong>Cloud Hosting:</strong> Infraestructura distribuida que permite el escalado dinámico (aumentar recursos en tiempo real según el tráfico).</li>
             </ul>
-        </article>
+        </section>
 
+        <section id="hardware" class="manual-section">
+            <h3>2. Hardware: Componentes Críticos</h3>
+            <p>Para entornos de producción, se utilizan componentes diseñados para operar 24/7:</p>
+            <ul>
+                <li><strong>Procesadores (CPU):</strong> Arquitecturas multinúcleo (Intel Xeon / AMD EPYC) optimizadas para procesos paralelos.</li>
+                <li><strong>Memoria RAM ECC:</strong> Memoria con código de corrección de errores que previene caídas del sistema por corrupción de datos.</li>
+                <li><strong>Almacenamiento RAID:</strong>
+                    <ul>
+                        <li><em>RAID 1 (Espejo):</em> Duplica la información en dos discos para evitar pérdida de datos si uno falla.</li>
+                        <li><em>RAID 5/10:</em> Combina velocidad de lectura/escritura con redundancia de datos.</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="galeria-tecnica">
+                <img src="https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?q=80&w=400" alt="CPU de Servidor" class="imagen-tecnica">
+                <img src="https://images.unsplash.com/photo-1551708383-196096700028?q=80&w=400" alt="Datacenter Hardware" class="imagen-tecnica">
+            </div>
+        </section>
+
+        <section id="software" class="manual-section">
+            <h3>3. Software y Entorno de Ejecución</h3>
+            <p>El estándar de la industria se basa en sistemas Linux debido a su estabilidad y seguridad.</p>
+            <h4>Configuración del Stack LAMP</h4>
+            <p>Comandos esenciales para preparar un servidor web en Ubuntu Server:</p>
+            <pre><code># Actualizar repositorios e instalar Apache y Base de Datos
+sudo apt update && sudo apt upgrade -y
+sudo apt install apache2 mariadb-server -y
+
+# Instalar PHP y módulos necesarios para procesamiento web
+sudo apt install php libapache2-mod-php php-mysql php-curl php-xml -y</code></pre>
+            <p>El software también incluye capas de seguridad como <strong>Firewalls (UFW)</strong> y certificados <strong>SSL/TLS</strong> para cifrar la comunicación.</p>
+        </section>
+
+        <section id="metodologia" class="manual-section">
+            <h3>4. Metodologías y Formas de Trabajo</h3>
+            <p>La eficiencia en la administración se logra mediante flujos de trabajo estandarizados:</p>
+            <ul>
+                <li><strong>Administración Remota (SSH):</strong> Acceso seguro mediante consola cifrada para gestionar el servidor sin interfaz gráfica.</li>
+                <li><strong>Contenedores (Docker):</strong> Empaquetado de aplicaciones y sus dependencias para asegurar que funcionen igual en cualquier entorno.</li>
+                <li><strong>Automatización:</strong> Uso de scripts en Bash o herramientas como Ansible para configurar múltiples servidores simultáneamente.</li>
+                <li><strong>Monitoreo:</strong> Revisión constante de logs en <code>/var/log/apache2/error.log</code> para identificar y corregir fallos proactivamente.</li>
+            </ul>
+            <pre><code># Ejemplo de acceso seguro vía SSH
+ssh -p 22 usuario@ip-del-servidor</code></pre>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 - Manual de Infraestructura Web | <a href="mailto:admin@ejemplo.com">Contacto Técnico</a></p>
-        <p>Basado en estándares de OWASP y The Linux Foundation.</p>
+        <p>&copy; 2026 AKcondor Games - Manual de Infraestructura | <a href="#">Documentación Completa</a></p>
     </footer>
 
 </body>
 </html>
+   
